@@ -68,4 +68,4 @@ espacios similares hasta meras suposiciones.
     * Ojo, importa que los mensajes en la bitácora resuman el trabajo
       realizado a cada paso.
 -----
-
+*Idea original: gwolf*
