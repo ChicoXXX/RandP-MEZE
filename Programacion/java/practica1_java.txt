@@ -1,0 +1,3 @@
+NotaS :
+
+1.-todo codigo se debe leer de arriba hacia abajo y de derecha a izqueirda
