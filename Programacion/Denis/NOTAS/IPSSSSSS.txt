@@ -1,0 +1,42 @@
+IPV4
+
+
+iP 192.168.0.1/24 CIDR
+
+DOTTED DECIMAL 11111111.11111111.11111111.11111111
+
+128/64/32/16/8/4/2/1
+
+Red
+Ip
+NetMask (#clientes): cuantos equipos hay en la red 
+Broadcast: ayuda aque las maquinas se comuniquen en la red, siempre sera sera el penultimo de la red
+
+Cuantos host podemos tener en una red de 24 bits cuando tomas todos los valores
+512 host disponibles para la red y los clientes podrian ser 502 
+
+Por que no puede tener 256? por que es el nombre de la red
+Por que no puede 255? por que el 255 es el brodcast
+
+Los routers con salida tienen 254? Se usapor que ya es el que esta libre
+
+Cuando es por opteto solo se toman en cuenta hasta el 128
+
+
+
+
+Ejemplo:
+192.168.3.0/27
+
+Red:192.168.3.0
+
+Ip(inicio):192.168.3
+
+Mascara de red:27= 255.255.255.224
+
+Broadcast:31
+
+CIDR 11111111.11111111.11111111.11100000
+ 
+
+

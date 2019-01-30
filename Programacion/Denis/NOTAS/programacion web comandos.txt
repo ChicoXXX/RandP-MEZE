@@ -1,0 +1,41 @@
+tr comienzo y fin de fila
+th define una celda cabezera
+td celda de una tabla
+
+ul y ol Viñetas
+
+dl describir
+dd definicion
+p parrafos
+cite citas 
+h1 numero letra titulo
+links <a href="" target= "-blank">pagina diferente moon
+img src imagenesss width u height
+alt= imagen de luna
+imagen con en lace s href= link><img src width y height
+
+button botton
+
+encabezados h1 style yfont size 2 em letra
+hr border color 
+parrafos p y pre
+estilos  h1 style
+<b>Denis</b> 
+Tipos de letras
+    <strong>Denis</strong>
+    <i>Denis</i>
+    <em>Denis</em>
+    <mark>Denis</mark>
+    <samll>Denis</samll>
+    <del>Denis</del>
+    <ins>Denis</ins>
+    <sub>Denis</sub>
+    <sup>Denis</sup>
+
+background-image: url("../img/NUBES.jpg"); fondo
+    background-repeat: no-repeat;no repetir imagen de fondo o color
+    background-size: cover;tama;o adecuado 
+    background-attachment: fixed; fijacion de fondo
+
+font sixe tama;o de fuente
+

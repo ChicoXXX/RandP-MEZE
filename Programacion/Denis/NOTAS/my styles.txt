@@ -1,0 +1,41 @@
+.green {
+    color:#42f465;   
+}
+.green-back{
+    background-color:#42f465;
+}
+.blue {
+    color:#80aaff;   
+}
+.blue-back{
+    background-color:#80aaff;
+}
+
+.white{
+    color:#f9f9f9;
+}
+.white-back{
+    background-color:#f9f9f9;
+}
+.black{
+    color:#000000;
+}
+.black-back{
+    background-color:#000000;
+}
+.fbb-blue{
+    color:#D3D8E8;
+}
+.fbb-blue-back{
+    background-color:#D3D8E8;
+}
+.fb-blue{
+    color:#3B5998;
+}
+.fb-blue-back{
+    background-color:#3B5998;
+}
+
+.btn-radius-tw{
+    border-radius: 1em;
+}
