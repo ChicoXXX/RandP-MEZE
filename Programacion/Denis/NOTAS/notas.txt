@@ -1,2 +1,0 @@
-.col-md-1.purple-back*6>h1.white{hellow}
-.col-md-1.green-back*6>h1.white{hellow}

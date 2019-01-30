@@ -1,5 +1,0 @@
-construido con rutas node.js
-5 vistas minimo
-1formulario
-diferentes
-codigo comentado

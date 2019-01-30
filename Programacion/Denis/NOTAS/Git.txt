@@ -1,7 +1,0 @@
-git checkout
-git branch
-git fetch origin
-git log
-git pull
-git status
-git commit -m 
