@@ -1,0 +1,71 @@
+Diagrama 1 
+
+-Inicio
+ i=0
+ j=0
+ Valor1=3
+ Valor2=5
+ SumaT3=0
+ SumaT5=0
+ Suma1=Valor1*i
+ Valor2=Valor2*2
+ Sumatotal
+
+-Sí: Suma es <= a 1000 Entoonces:
+  Suma1=Valor1*1
+  SumaT3=SumaT3+Suma1
+  i=i+1
+-FinSi
+
+-Sí: Suma2 es <= a 1000 Entonces:
+  Suma2=Valor2*j
+  SumaT5=SumaT5+Suma2
+  j=J+1
+-FinSi
+
+-Imprimir SumaTotal
+-Fin
+
+/////////////////
+Diagrama 2
+
+-Inicio
+ Num1=1
+ Num2=0
+ Temp=Num1
+
+-Sí: Num1+Num2<=4000000 Entonces
+  Temp=Num1
+  Num1=Num2
+  Num2=Temp+Num1
+-FinSi
+
+-Imprimir Num2
+-Fin
+
+
+/////////////////
+Diagrama 3 
+
+-Inicio
+
+ Leer Num1
+ i=1
+ Factorial=1
+
+-Sí: i<Num1 Entonces
+
+  Factorial = Factorial*i
+  i=i+1
+
+-FinSi
+
+-Imprimir Factorial
+-Fin
+
+
+///////////////
+Diagrama 4
+
+
+ 
