@@ -1,0 +1,65 @@
+¿Qué es una IP?
+
+Es una etiqueta numérica que identifica, de manera lógica y jerárquica, a un interfaz de un dispositivo, 
+dentro de una red que utilice el protocolo IP, que corresponde al nivel de red del protocolo TCP/IP.
+
+
+Clases de IP 
+
+
+Clase A 
+
+Esta clase es para las redes muy grandes, tales como las de una gran compañía internacional. 
+Los primeros 8 bits de la dirección son usados para identificar la red, mientras los otros tres segmentos de ocho bits 
+cada uno son usados para identificar a las computadoras. (xxx.yyy.yyy.yyy). Esto nos permite crear hasta 126 redes 
+distintas y tener un máximo de 16.777.214 equipos conectados por red.
+
+Clase B 
+
+Se utiliza para las redes de tamaño mediano. Un buen ejemplo es un campus grande de la universidad. 
+Las direcciones del IP con un primer octeto a partir del 128 a1 191 son parte de esta clase. 
+Este tipo de red utiliza dos grupos de ocho bits para identificar la red, mientras que los dos restantes son utilizados 
+para identificar a la computadora (xxx.xxx.yyy.yyy) Esto nos permite crear un mayor número de redes, 
+pero menos equipos conectados por red (16.384 redes y 65.534 equipos).
+
+Clase C
+Las direcciones de la clase C se utilizan comúnmente para los negocios pequeños a mediados de tamaño. 
+Sus direcciones del IP con un primer octeto a partir del 192 al 223 son parte de esta clase.
+Usa los tres primeros grupos de ocho bits como identificador de red y los ocho bits restantes como identificador de equipo
+(xxx.xxx.xxx.yyy) Esto nos hace tener más redes distintas aún, pero menor número de equipos por red (2.097.152 redes y 254 
+equipos por red).
+
+Clase D
+
+Es reservado para la multidifusión. Los datos de la multidifusión no está destinado para un host en particular, 
+por eso no hay necesidad de extraer direcciones de host de la dirección IP, y la clase D no tiene ninguna máscara de subred.
+En esta red todos los segmentos de ocho bits son utilizados para identificar la red, sus direcciones IP van desde 224.0.0.0
+hasta 239.255.255.255.
+
+
+Clase E
+
+La clase E se utiliza para propósitos experimentales solamente.
+
+
+Clase Y
+
+Esta clase de red está reservada por la IANA (Internet Asigned Numbers Authority) para uso futuro.
+
+
+
+IPv4 
+Es la cuarta versión del Internet Protocol. Un protocolo de interconexión de redes basados en Internet, 
+y fue la primera versión implementada para la producción de ARPANET, en 1983.
+Las direcciones disponibles en la reserva global de IANA pertenecientes al protocolo IPv4 se agotaron oficialmente 
+el lunes 31 de enero de 2011. Los Registros Regionales de Internet deben manejarse con sus propias reservas, 
+que se estima alcanzaran hasta el 2020. 
+
+
+IPv6
+Es la versión 6 del Internet Protocol, diseñada para reemplazar a Internet Protocol version 4, que a 2016 se está implementando 
+en la gran mayoría de dispositivos que acceden a Internet. El uso de IPv6 a nivel global representa el 9.67% basados en las 
+conexiones que recibe el Tracker (BitTorrent)
+
+
+
