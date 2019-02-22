@@ -1,0 +1,42 @@
+Favor de resolver con diagrama de flujo y pseudocódigo los siguientes problemas:
+
+********************
+Programa 1.
+
+Si enumeramos todos los números naturales por debajo de 10 que son múltiplos de 3 o 5, obtenemos 3, 5, 6 y 9. La suma de estos múltiplos es 23.
+
+Encuentra la suma de todos los múltiplos de 3 o 5 debajo de 1000.
+
+********************
+
+Programa 2.
+
+Cada nuevo término en la secuencia de Fibonacci se genera al agregar los dos términos anteriores.
+Al comenzar con 1 y 2, los primeros 10 términos serán:
+
+1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+Al considerar los términos en la secuencia de Fibonacci cuyos valores no exceden los cuatro millones, encuentre la suma de los términos de valor par.
+
+********************
+
+Programa 3.
+
+n! significa factorial de n, o en otras palabras: n × (n - 1) × ... × 3 × 2 × 1
+
+Haga un programa para calcular el factorial de un número cualquiera.
+
+********************
+
+Programa 4.
+
+n! significa factorial de n, o en otras palabras: n × (n - 1) × ... × 3 × 2 × 1
+
+Por ejemplo, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,
+y la suma de los dígitos en el número 10! es 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+
+¡Encuentra la suma de los dígitos en el número 100!
+
+********************
+
+

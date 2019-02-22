@@ -1,0 +1,20 @@
+CLASE A COMIENZA EN 0.0.0.0 Y TERMINA EN 127.255.255.255 "ESTA CLASE ES PARA REDES MUY GRANDES COMO COMPAÑIA INTERNACIONAL"
+
+CLASE B COMIENZA EN 128.0.0.0 Y TERMINA EN 191.255.255.255 "ESTA CLASE ES PARA REDES DE TAMAÑO MEDIANO, COMO UNIVERSIDADES"
+
+CLASE C COMIENZA EN 192.0.0.0 Y TERMINA EN 223.255.255.255 "ESTA CLASE ES PARA NEGOCIOS PEQUEÑOS A MEDIANOS"
+
+CLASE D COMIENZA EN 224.0.0.0 Y TERMINA EN 239.255.255.255 "ESTA CLASE ES PARA MULTICAST"
+
+CLASE E COMIENZA EN 240.0.0.0 Y TERMINA EN 247.255.255.255 "ESTA CLASE ES PARA PROPOSITOS EXPERIMENTALES SOLAMENTE"
+
+
+IPV4: Pv4 es el principal protocolo utilizado en el Nivel de Red del Modelo TCP/IP para Internet. Fue descrito inicial mente en 
+      el RFC 791 elaborado por la Fuerza de Trabajo en Ingeniería de Internet (IETF o Internet Engineering Task Force) en 
+      Septiembre de 1981.
+      El campo tipo de servicio permite al host indicar a la subred el tipo de servicio que quiere. Son posibles varias 
+      combinaciones de confiabilidad y velocidad.
+
+
+IPV6:  IPv6 el cual fue lanzado en el año 1999. Esta nueva versión es el futuro de las comunicaciones, ya que ayudara a nuevos 
+       dispositivos a poder estar conectados.
