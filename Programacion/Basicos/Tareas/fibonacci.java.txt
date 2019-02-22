@@ -1,0 +1,30 @@
+
+	public class fibo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	      int num1 = 0;
+	      int num2 =1;
+	      int limite = 100;
+	      int temp = 0;
+
+
+	      for (int i =0 ; i <=limite; i++)// el ciclo for nos ayudara a ser el conteo de valores (1,1,2,3,5,8)(1,2,3,4,5,6)
+	      {
+	    	  if (num1 < limite) num1 = 2 es mayor a limite (2 es mayo a 100 no hace el ciclo y la suma y num1 ya cambio 3 es mayor a 100 no cicla y emprime) 
+
+{
+	    		  
+	    		  temp = num1;
+		    	  num1 = num2;
+		    	  num2 = temp + num1;
+		    	  System.out.println(num2);
+		    	
+	    		  
+	    	  }  
+	          
+	      }
+
+	}
+}
