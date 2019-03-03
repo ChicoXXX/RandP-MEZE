@@ -1,0 +1,53 @@
+package fibonacci;
+import java.util.*;
+
+public class fibo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         
+		  
+		 Scanner sc = new Scanner(System.in); //Se crea el lector
+		 System.out.println("Por favor ingrese el primer valor");//Se pide un dato al usuario
+		 int num1 = sc.nextInt(); //Se guarda la edad directamente con nextInt()
+		  
+		  
+		   System.out.println("Por favor ingrese el segundo valor");//Se pide un dato al usuario
+		   int num2 = sc.nextInt(); //Se guarda la edad directamente con nextInt()
+		  
+		  
+		   System.out.println("Por favor ingrese el limite");//Se pide un dato al usuario
+		   int limite = sc.nextInt(); //Se guarda la edad directamente con nextInt()
+		  
+		  
+		
+		
+		
+	       
+	 
+	      int temp = 0;
+	      for (int i =0 ; i <= limite; i++)
+	      {  
+	    	  if (num1<limite && i<9)
+	    	  
+	    	  {
+	    		  System.out.println(num1);
+	    		  temp = num1;
+		    	  num1 = num2;
+		    	  num2 = temp + num1;
+		    	 
+	    	   	
+	    	  } 
+	    	  else
+	    	  {
+	    		  
+	    		  System.out.println("\n"+num2);
+	    	  }
+	    	
+	    	 
+	      }
+	      
+	      
+	      
+	}
+}
