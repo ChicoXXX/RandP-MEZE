@@ -1,0 +1,78 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejemplo_1;
+import javax.swing.*;
+import java.awt.event.*;
+/**
+ *
+ * @author Angel_Administrador
+ */
+
+public class Ejemplo_1 extends JFrame implements ActionListener{
+private JTextField textfield1,textfield2,textfield3;
+     	public JLabel resu;
+
+    private JButton boton1;
+    public Ejemplo_1() {
+        setLayout(null);
+        textfield1=new JTextField();
+        textfield1.setBounds(10,10,100,30);
+        this.setTitle("Suma de valores");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(textfield1);
+        textfield2=new JTextField();
+        textfield2.setBounds(10,50,100,30);
+        add(textfield2);
+        textfield3=new JTextField();
+        textfield3.setBounds(10,150,100,30);
+        add(textfield3);
+        
+            resu = new JLabel();
+            resu.setBounds(10,190,100,30);
+            add(resu);
+      
+        
+        
+        
+        boton1=new JButton("Sumar");
+        boton1.setBounds(10,90,100,30);
+        add(boton1);
+        boton1.addActionListener(this);
+     
+ 
+    }
+    
+     public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==boton1) {
+           
+            String cad1=textfield1.getText();
+            String cad2=textfield2.getText();
+            String cad3=textfield3.getText();
+    
+            int x1=Integer.parseInt(cad1);
+            int x2=Integer.parseInt(cad2);
+            int suma=x1+x2;  
+            
+            textfield3.setText(String.valueOf(suma));
+            resu.setText(String.valueOf(suma));
+             
+          
+        }
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Ejemplo_1 formulario1=new Ejemplo_1();
+        formulario1.setBounds(10,10,300,300);
+        formulario1.setVisible(true);
+        
+        
+    }
+    
+}
