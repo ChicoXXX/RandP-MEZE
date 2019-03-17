@@ -1,0 +1,351 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package numeros_letra;
+import javax.swing.*;
+import java.awt.event.*;
+/**
+ *
+ * @author angelgabriel
+ */
+public class Numeros_letra extends JFrame implements ActionListener {
+public JTextField textfield1;
+public JLabel resultado;
+public JLabel resultado2;
+public JLabel resultado3;
+public JLabel resultado4;
+public JLabel resultado5;
+
+
+public JLabel resultado_unidad;
+public JLabel resultado_decena;
+public JLabel resultado_centena;
+public JLabel resultado_millar;
+
+
+private JButton boton1;
+
+  public Numeros_letra(){
+  this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  setLayout(null);
+  this.setTitle("Numeros");
+  
+    textfield1=new JTextField();
+    textfield1.setBounds(10,10,100,30);
+    add(textfield1);
+    
+    boton1=new JButton("Convertir");
+    boton1.setBounds(10,90,100,30);
+    add(boton1);
+    boton1.addActionListener(this);
+    
+    
+    
+      resultado = new JLabel();
+      resultado.setBounds(10,190,100,30);
+      add(resultado);
+      
+      resultado2 = new JLabel();
+      resultado2.setBounds(10,230,100,30);
+      add(resultado2);
+       
+      resultado3 = new JLabel();
+      resultado3.setBounds(10,270,100,30);
+      add(resultado3);
+      
+      resultado4 = new JLabel();
+      resultado4.setBounds(10,300,100,30);
+      add(resultado4);
+      
+      resultado5 = new JLabel ();
+      resultado5.setBounds(10,330,100,30);
+      add(resultado5);
+       resultado = new JLabel();
+      resultado.setBounds(10,190,100,30);
+      add(resultado);
+      
+      
+      
+      resultado_unidad = new JLabel();
+      resultado_unidad.setBounds(210,340,100,30);
+      add(resultado_unidad);
+       
+      resultado_decena = new JLabel();
+    resultado_decena.setBounds(140,340,100,30);
+      add(resultado_decena);
+      
+       resultado_centena = new JLabel();
+       resultado_centena.setBounds(60,340,100,30);
+      add( resultado_centena);
+      
+      resultado_millar= new JLabel ();
+      resultado_millar.setBounds(10,340,100,30);
+      add(resultado_millar);
+      
+      
+}
+
+public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==boton1) {
+           
+            String valor1=textfield1.getText();
+            
+            int numero_1 =Integer.parseInt(valor1);
+            int unidades;
+            int decenas;
+            int centena;
+            int millar;
+             
+            unidades = numero_1%10;
+            numero_1 = numero_1/10;
+            resultado.setText(String.valueOf(unidades +"  "+"unidades"));
+            
+            decenas = numero_1%10;
+            numero_1 = numero_1/10;
+            
+             resultado2.setText(String.valueOf(decenas +"  "+ "decenas"));
+            
+             
+            centena = numero_1%10;
+            numero_1 = numero_1/10;
+            
+            resultado3.setText(String.valueOf(centena +" "+"centenas"));
+            
+            millar = numero_1%10;
+            numero_1 = numero_1/10;
+            resultado4.setText(String.valueOf(millar +"  "+"millar"));
+
+           switch (millar){
+               
+               case 1:
+                  
+                 resultado_millar.setText(String.valueOf("MIL"));
+                   break;
+                   
+                    default:
+                 resultado_millar.setText(String.valueOf(""));
+                   break;  
+           }
+                 switch (centena){
+               
+               case 1:
+                  resultado_centena.setText(String.valueOf("cien"));
+                   break;
+                   
+                 case 2:
+                  resultado_centena.setText(String.valueOf("docientos"));
+                   break;
+                       
+                 case 3:
+                  resultado_centena.setText(String.valueOf("trecientos"));
+                   break;
+                           
+                 case 4:
+                 resultado_centena.setText(String.valueOf("cuatrocientos"));
+                   break;
+                               
+                 case 5:
+                  resultado_centena.setText(String.valueOf("quinientos"));
+                   break;
+                                   
+                 case 6:
+                 resultado_centena.setText(String.valueOf("seiscientos"));
+                   break;
+                 case 7:
+                  resultado_centena.setText(String.valueOf("setecientos"));
+                   break;
+                 case 8:
+                  resultado_centena.setText(String.valueOf("ochocientos"));
+                   break;
+                 case 9:
+                 resultado_centena.setText(String.valueOf("novecientos"));
+                   break;
+                 default:
+                 resultado_centena.setText(String.valueOf(""));
+                   break;    
+                
+           }
+                switch (decenas){
+                   case 1:
+                       if (decenas ==1 && unidades ==1)
+                       {
+                           resultado_decena.setText(String.valueOf("once"));
+                       }
+                       else if (decenas ==1 && unidades ==2)
+                       {
+                        resultado_decena.setText(String.valueOf("doce"));
+
+                       }
+                       else if(decenas ==1 && unidades ==3)
+                       {
+                           resultado_decena.setText(String.valueOf("trece"));
+                       }
+                       else if (decenas ==1 && unidades ==4)
+                       {
+                         resultado_decena.setText(String.valueOf("catorce"));
+                       }
+                       else if (decenas ==1 && unidades ==5)
+                       {
+                          resultado_decena.setText(String.valueOf("quince"));
+                       }
+                       else if (decenas ==1 && unidades ==6)
+                       {
+                      resultado_decena.setText(String.valueOf("Diez y"));
+                       }
+                       else if (decenas ==1 && unidades ==7)
+                       {
+                       resultado_decena.setText(String.valueOf("Diez y"));
+                       }
+                       else if (decenas ==1 && unidades ==8)
+                       {
+                       resultado_decena.setText(String.valueOf("Diez y"));
+                       }
+                       else if (decenas ==1 && unidades ==9)
+                       {
+                       resultado_decena.setText(String.valueOf("Diez y"));
+                       
+                       }
+                       else if (decenas ==1 && unidades ==0)
+                       {
+                        resultado_decena.setText(String.valueOf("diez"));
+                       }
+                   break;
+                       
+                  
+
+                   
+                 case 2:
+                     if (decenas == 2)
+                     {
+                         resultado_decena.setText(String.valueOf("veinte y"));
+                     }
+                     else 
+                     
+                     {
+                         
+                      resultado_decena.setText(String.valueOf("veinte"));
+                     }
+                   break;
+                       
+                 case 3:
+                     if(decenas==3){
+                     resultado_decena.setText(String.valueOf("treinta y"));
+                     }
+                     else
+                        {
+                           resultado_decena.setText(String.valueOf("treinta"));
+                        }
+                   break;
+                           
+                 case 4:
+                     if (decenas ==4)
+                     {
+                         resultado_decena.setText(String.valueOf("cuarenta y"));
+                     }
+                     else{
+                 resultado_decena.setText(String.valueOf("cuarenta"));
+                     }
+                   break;
+                               
+                 case 5:
+                      if (decenas ==5)
+                   {
+                     resultado_decena.setText(String.valueOf("cincuenta y"));
+                   }
+                      else{
+                 resultado_decena.setText(String.valueOf("cincuenta"));
+                  
+                      }  
+                      break;
+                 case 6:
+                     if (decenas == 6){
+                           resultado_decena.setText(String.valueOf("sesenta y"));
+                     }
+                     else
+                 resultado_decena.setText(String.valueOf("sesenta"));
+                   break;
+                     
+                     
+                 case 7:
+                     if (decenas == 7){
+                     resultado_decena.setText(String.valueOf("setenta y"));
+                 }
+                     else{
+                resultado_decena.setText(String.valueOf("setenta"));
+                     }
+                   break;
+                 case 8:
+                     if (decenas == 8)
+                     {
+                        resultado_decena.setText(String.valueOf("ochonta y "));
+                     }
+                     
+                 resultado_decena.setText(String.valueOf("ochonta"));
+                   break;
+                 case 9:
+                     if (decenas == 9)
+                     {
+                        resultado_decena.setText(String.valueOf("noventa y"));
+                     }
+                     else{
+                 resultado_decena.setText(String.valueOf("noventa"));
+                     }
+                   break;
+                     
+                      default:
+                 resultado_decena.setText(String.valueOf(""));
+                   break;  
+                }   
+               switch (unidades){
+                case 1 :resultado_unidad.setText(String.valueOf("uno"));
+                break;
+                    
+                case 2 :resultado_unidad.setText(String.valueOf("Dos"));
+                break;
+                    
+                case 3 :resultado_unidad.setText(String.valueOf("tres"));
+                break;
+                    
+                case 4 :resultado_unidad.setText(String.valueOf("cuatro"));
+                break;
+                        
+                case 5 :resultado_unidad.setText(String.valueOf("cinco"));
+                break;
+                    
+                case 6 :resultado_unidad.setText(String.valueOf("seis"));
+                break;
+                    
+                case 7 :resultado_unidad.setText(String.valueOf("siete"));
+                break;
+                    
+                case 8 :resultado_unidad.setText(String.valueOf("ocho"));
+                break;
+                    
+                case 9 :resultado_unidad.setText(String.valueOf("nueve"));
+                break; 
+                
+                default:
+                 resultado_unidad.setText(String.valueOf(""));
+                   break;  
+                    
+         
+                
+            }
+ 
+          
+        }
+}
+
+   /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+           Numeros_letra formulario1=new Numeros_letra();
+           formulario1.setBounds(10,10,600,600);
+           formulario1.setVisible(true);
+    }
+    
+}
