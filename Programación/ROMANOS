@@ -1,0 +1,130 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace NumRomanos
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int _Num;
+            int _Unidades;
+            int _Decenas;
+            int _Centenas;
+            int _UMillar;
+
+            try
+            {
+                _Num = Convert.ToInt32(textBox1.Text);
+
+
+                _Unidades = _Num % 10;
+                _Decenas = (_Num / 10) % 10;
+                _Centenas = (_Num / 100) % 10;
+                _UMillar = _Num / 1000;
+
+               
+
+                switch (_Unidades)
+                {
+                    case 1: textBox5.Text = "I";
+                        break;
+                    case 2: textBox5.Text = "II";
+                        break;
+                    case 3: textBox5.Text = "III";
+                        break;
+                    case 4: textBox5.Text = "IV";
+                        break;
+                    case 5: textBox5.Text = "V";
+                        break;
+                    case 6: textBox5.Text = "VI";
+                        break;
+                    case 7: textBox5.Text = "VII";
+                        break;
+                    case 8: textBox5.Text = "VIII";
+                        break;
+                    case 9: textBox5.Text = "IX";
+                        break;
+                }
+                switch (_Decenas)
+                {
+                    case 1: textBox4.Text = "X";
+                        break;
+                    case 2: textBox4.Text = "XX";
+                        break;
+                    case 3: textBox4.Text = "XXX";
+                        break;
+                    case 4: textBox4.Text = "XL";
+                        break;
+                    case 5: textBox4.Text = "L";
+                        break;
+                    case 6: textBox4.Text = "LX";
+                        break;
+                    case 7: textBox4.Text = "LXX";
+                        break;
+                    case 8: textBox4.Text = "LXXX";
+                        break;
+                    case 9: textBox4.Text = "XC";
+                        break;
+                }
+                switch (_Centenas)
+                {
+                    case 1: textBox3.Text = "C";
+                        break;
+                    case 2: textBox3.Text = "CC";
+                        break;
+                    case 3: textBox3.Text = "CCC";
+                        break;
+                    case 4: textBox3.Text = "CD";
+                        break;
+                    case 5: textBox3.Text = "D";
+                        break;
+                    case 6: textBox3.Text = "DC";
+                        break;
+                    case 7: textBox3.Text = "DCC";
+                        break;
+                    case 8: textBox3.Text = "DCCC";
+                        break;
+                    case 9: textBox3.Text = "CM";
+                        break;
+                }
+                switch (_UMillar)
+                {
+                    case 1: textBox2.Text = "M";
+                        break;
+                    case 2: textBox2.Text = "MM";
+                        break;
+                    case 3: textBox2.Text = "MMM";
+                        break;
+                }
+
+
+                }
+
+            catch { }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+        }
+    }
+
+}
