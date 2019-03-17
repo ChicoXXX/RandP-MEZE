@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace NombreNum
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int _Num;
+            int _Unidades;
+            int _Decenas;
+            int _Centenas;
+            int _UMillar;
+
+            try
+            {
+                _Num = Convert.ToInt32(textnumero.Text);
+
+
+                _Unidades = _Num % 10;
+                _Decenas = (_Num / 10) % 10;
+                _Centenas = (_Num / 100) % 10;
+                _UMillar = _Num / 1000;
+
+               
+
+                switch (_Unidades)
+                {
+                    case 1: textBox5.Text = "uno";
+                        break;
+                    case 2: textBox5.Text = "dos";
+                        break;
+                    case 3: textBox5.Text = "tres";
+                        break;
+                    case 4: textBox5.Text = "cuatro";
+                        break;
+                    case 5: textBox5.Text = "cinco";
+                        break;
+                    case 6: textBox5.Text = "seis";
+                        break;
+                    case 7: textBox5.Text = "siete";
+                        break;
+                    case 8: textBox5.Text = "ocho";
+                        break;
+                    case 9: textBox5.Text = "nueve";
+                        break;
+                }
+                switch (_Decenas)
+                {
+                    case 1: textBox4.Text = "diez";
+                        break;
+                    case 2: textBox4.Text = "veinte";
+                        break;
+                    case 3: textBox4.Text = "treinta";
+                        break;
+                    case 4: textBox4.Text = "cuarenta";
+                        break;
+                    case 5: textBox4.Text = "cincuenta";
+                        break;
+                    case 6: textBox4.Text = "sesenta";
+                        break;
+                    case 7: textBox4.Text = "setenta";
+                        break;
+                    case 8: textBox4.Text = "ochenta";
+                        break;
+                    case 9: textBox4.Text = "novena";
+                        break;
+                }
+                switch (_Centenas)
+                {
+                    case 1: textBox3.Text = "cien";
+                        break;
+                    case 2: textBox3.Text = "doscientos";
+                        break;
+                    case 3: textBox3.Text = "trescientos";
+                        break;
+                    case 4: textBox3.Text = "cuatroscientos";
+                        break;
+                    case 5: textBox3.Text = "quinientos";
+                        break;
+                    case 6: textBox3.Text = "seiscientos";
+                        break;
+                    case 7: textBox3.Text = "setecientos";
+                        break;
+                    case 8: textBox3.Text = "ochocientos";
+                        break;
+                    case 9: textBox3.Text = "novecientos";
+                        break;
+                }
+                switch (_UMillar)
+                {
+                    case 1: textBox2.Text = "Mil";
+                        break;
+                    case 2: textBox2.Text = "Dosmil";
+                        break;
+                    case 3: textBox2.Text = "Tresmil";
+                        break;
+                }
+
+
+                }
+
+            catch { }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textnumero.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+        }
+
+        }
+        
+    }
