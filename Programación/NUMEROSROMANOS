@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NombreNum
+namespace NumRomanos
 {
     public partial class Form1 : Form
     {
@@ -27,7 +27,7 @@ namespace NombreNum
 
             try
             {
-                _Num = Convert.ToInt32(textnumero.Text);
+                _Num = Convert.ToInt32(textBox1.Text);
 
 
                 _Unidades = _Num % 10;
@@ -39,74 +39,74 @@ namespace NombreNum
 
                 switch (_Unidades)
                 {
-                    case 1: textBox5.Text = "uno";
+                    case 1: textBox5.Text = "I";
                         break;
-                    case 2: textBox5.Text = "dos";
+                    case 2: textBox5.Text = "II";
                         break;
-                    case 3: textBox5.Text = "tres";
+                    case 3: textBox5.Text = "III";
                         break;
-                    case 4: textBox5.Text = "cuatro";
+                    case 4: textBox5.Text = "IV";
                         break;
-                    case 5: textBox5.Text = "cinco";
+                    case 5: textBox5.Text = "V";
                         break;
-                    case 6: textBox5.Text = "seis";
+                    case 6: textBox5.Text = "VI";
                         break;
-                    case 7: textBox5.Text = "siete";
+                    case 7: textBox5.Text = "VII";
                         break;
-                    case 8: textBox5.Text = "ocho";
+                    case 8: textBox5.Text = "VIII";
                         break;
-                    case 9: textBox5.Text = "nueve";
+                    case 9: textBox5.Text = "IX";
                         break;
                 }
                 switch (_Decenas)
                 {
-                    case 1: textBox4.Text = "diez";
+                    case 1: textBox4.Text = "X";
                         break;
-                    case 2: textBox4.Text = "veinte";
+                    case 2: textBox4.Text = "XX";
                         break;
-                    case 3: textBox4.Text = "treinta";
+                    case 3: textBox4.Text = "XXX";
                         break;
-                    case 4: textBox4.Text = "cuarenta";
+                    case 4: textBox4.Text = "XL";
                         break;
-                    case 5: textBox4.Text = "cincuenta";
+                    case 5: textBox4.Text = "L";
                         break;
-                    case 6: textBox4.Text = "sesenta";
+                    case 6: textBox4.Text = "LX";
                         break;
-                    case 7: textBox4.Text = "setenta";
+                    case 7: textBox4.Text = "LXX";
                         break;
-                    case 8: textBox4.Text = "ochenta";
+                    case 8: textBox4.Text = "LXXX";
                         break;
-                    case 9: textBox4.Text = "novena";
+                    case 9: textBox4.Text = "XC";
                         break;
                 }
                 switch (_Centenas)
                 {
-                    case 1: textBox3.Text = "cien";
+                    case 1: textBox3.Text = "C";
                         break;
-                    case 2: textBox3.Text = "doscientos";
+                    case 2: textBox3.Text = "CC";
                         break;
-                    case 3: textBox3.Text = "trescientos";
+                    case 3: textBox3.Text = "CCC";
                         break;
-                    case 4: textBox3.Text = "cuatroscientos";
+                    case 4: textBox3.Text = "CD";
                         break;
-                    case 5: textBox3.Text = "quinientos";
+                    case 5: textBox3.Text = "D";
                         break;
-                    case 6: textBox3.Text = "seiscientos";
+                    case 6: textBox3.Text = "DC";
                         break;
-                    case 7: textBox3.Text = "setecientos";
+                    case 7: textBox3.Text = "DCC";
                         break;
-                    case 8: textBox3.Text = "ochocientos";
+                    case 8: textBox3.Text = "DCCC";
                         break;
-                    case 9: textBox3.Text = "novecientos";
+                    case 9: textBox3.Text = "CM";
                         break;
                 }
                 switch (_UMillar)
                 {
-                    case 1: textBox2.Text = "Mil";
+                    case 1: textBox2.Text = "M";
                         break;
-                    case 2: textBox2.Text = "Dosmil";
+                    case 2: textBox2.Text = "MM";
                         break;
-                    case 3: textBox2.Text = "Tresmil";
+                    case 3: textBox2.Text = "MMM";
                         break;
                 }
 
@@ -119,13 +119,12 @@ namespace NombreNum
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textnumero.Text = "";
+            textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
         }
-
-        }
-        
     }
+
+}
