@@ -1,0 +1,188 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package romanos;
+import javax.swing.*;
+import java.awt.event.*;
+/**
+ *
+ * @author angelgabriel
+ */
+public class Romanos  extends JFrame implements ActionListener {
+public JTextField textfield1;
+public JLabel resultado_unidad;
+public JLabel resultado_decenas;
+public JLabel resultado_centenas;
+public JLabel resultado_millares;
+
+
+private JButton boton1;
+
+  public Romanos(){
+  this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  setLayout(null);
+  this.setTitle("Numeros");
+  
+    textfield1=new JTextField();
+    textfield1.setBounds(10,10,100,30);
+    add(textfield1);
+    
+    boton1=new JButton("Convertir");
+    boton1.setBounds(10,90,100,30);
+    add(boton1);
+    boton1.addActionListener(this);
+    
+    
+    
+      resultado_unidad = new JLabel();
+      resultado_unidad.setBounds(90,130,100,30);
+      add(resultado_unidad);
+      
+       resultado_decenas = new JLabel();
+      resultado_decenas.setBounds(64,130,100,30);
+      add(resultado_decenas);
+      
+       resultado_centenas = new JLabel();
+      resultado_centenas.setBounds(40,130,100,30);
+      add(resultado_centenas);
+      
+       resultado_millares = new JLabel();
+      resultado_millares.setBounds(10,130,100,30);
+      add(resultado_millares);
+          
+  }
+      
+      
+      public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==boton1) {
+           
+            String valor=textfield1.getText();
+            
+            int numero_1 =Integer.parseInt(valor);
+            int unidades;
+            int decenas;
+            int centena;
+            int millar;
+             
+            unidades = numero_1%10;
+            numero_1 = numero_1/10;
+            
+            
+            decenas = numero_1%10;
+            numero_1 = numero_1/10;
+            
+           
+            
+             
+            centena = numero_1%10;
+            numero_1 = numero_1/10;
+            
+        
+            
+            millar = numero_1%10;
+            numero_1 = numero_1/10;
+              
+            switch(millar){
+                
+                case 1 : resultado_millares.setText(String.valueOf("M"));
+                    break;
+		case 2 : resultado_millares.setText(String.valueOf("MM"));
+                    break;
+                case 3 : resultado_millares.setText(String.valueOf("MMM"));
+                    break;
+                    
+                default : resultado_millares.setText(String.valueOf(""));
+                       break;
+		
+	}
+	
+	switch(centena){
+            
+            case 1 : resultado_centenas.setText(String.valueOf("C"));
+                    break;
+		case 2 : resultado_centenas.setText(String.valueOf("CC"));
+                    break;
+                case 3 : resultado_centenas.setText(String.valueOf("CCC"));
+                    break;
+                    case 4 : resultado_centenas.setText(String.valueOf("CD"));
+                    break;
+		case 5 : resultado_centenas.setText(String.valueOf("D"));
+                    break;
+                case 6 : resultado_centenas.setText(String.valueOf("DC"));
+                    break;
+                    case 7 : resultado_centenas.setText(String.valueOf("DCC"));
+                    break;
+		case 8 : resultado_centenas.setText(String.valueOf("DCCC"));
+                    break;
+                case 9 : resultado_centenas.setText(String.valueOf("CM"));
+                    break;
+               default : resultado_centenas.setText(String.valueOf(""));
+                      break;
+		
+	}
+	
+	switch(decenas){
+            
+            case 1 : resultado_decenas.setText(String.valueOf("X"));
+                    break;
+		case 2 : resultado_decenas.setText(String.valueOf("XX"));
+                    break;
+                case 3 : resultado_decenas.setText(String.valueOf("XXX"));
+                    break;
+                    case 4 : resultado_decenas.setText(String.valueOf("XL"));
+                    break;
+		case 5 : resultado_decenas.setText(String.valueOf("L"));
+                    break;
+                case 6 : resultado_decenas.setText(String.valueOf("LX"));
+                    break;
+                    case 7 : resultado_decenas.setText(String.valueOf("LXX"));
+                    break;
+		case 8 : resultado_decenas.setText(String.valueOf("LXXX"));
+                    break;
+                case 9 : resultado_decenas.setText(String.valueOf("XC"));
+                    break;
+		default : resultado_decenas.setText(String.valueOf(""));
+                       break;
+	}
+	
+	switch(unidades){
+            
+                case 1 : resultado_unidad.setText(String.valueOf("I"));
+                    break;
+		case 2 : resultado_unidad.setText(String.valueOf("II"));
+                    break;
+                case 3 : resultado_unidad.setText(String.valueOf("III"));
+                    break;
+                    case 4 : resultado_unidad.setText(String.valueOf("IV"));
+                    break;
+		case 5 : resultado_unidad.setText(String.valueOf("V"));
+                    break;
+                case 6 : resultado_unidad.setText(String.valueOf("VI"));
+                    break;
+                    case 7 : resultado_unidad.setText(String.valueOf("VII"));
+                    break;
+		case 8 : resultado_unidad.setText(String.valueOf("VIII"));
+                    break;
+                case 9 : resultado_unidad.setText(String.valueOf("IX"));
+                    break;
+                    default : resultado_unidad.setText(String.valueOf(""));
+                        break;
+	}
+	
+}  
+      }
+       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+           Romanos formulario1=new Romanos();
+           formulario1.setBounds(10,10,600,600);
+           formulario1.setVisible(true);
+    }
+    
+}
