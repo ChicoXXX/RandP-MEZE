@@ -1,0 +1,77 @@
+package convertidorNumerosLetra;
+import javax.swing.*;
+import java.awt.event.*;
+
+@SuppressWarnings("serial")
+public class NUMEROLETRA extends JFrame implements ActionListener{
+
+	private JTextField textfieldnumero, textfieldresultado;
+	private JButton boton1,boton2;
+	
+	public JLabel Dato;
+	public JLabel Letra;
+	
+	public NUMEROLETRA() {
+		
+		super("CALCULAR");
+		setLayout(null);
+		
+		//textfieldnumero o Numero a Ingresar Entero
+		textfieldnumero= new JTextField();
+		textfieldnumero.setBounds(130,10,100,30);
+		add(textfieldnumero);
+		
+		//Jlabel donde Ingresas los datos
+		this.Dato=new JLabel("Ingresa Número:");
+		Dato.setBounds(10,10,130,30);
+		this.add(this.Dato);
+		
+		//textfieldresultado o Resultado a Letras
+		textfieldresultado=new JTextField();
+		textfieldresultado.setBounds(130,50,300,30);
+		add(textfieldresultado);
+		
+		//JLabel Donde muestra Resultado a Letra
+		this.Letra=new JLabel("Con Letra: ");
+		Letra.setBounds(10,50,130,30);
+	    this.add(this.Letra);
+	    
+	    //Boton Calcular
+	    boton1=new JButton("Calcular");
+	    boton1.setBounds(130, 100, 100, 30);
+	    add(boton1);
+	    boton1.addActionListener(this);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    
+	    
+	    //Boton Limpiar
+	    boton2=new JButton("Limpiar");
+	    boton2.setBounds(130, 150, 100, 30);
+	    add(boton2);
+	    boton2.addActionListener(this);
+	}
+	
+
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==boton1) {
+			
+			String Rpta = "";
+			Rpta = numero.nletra(Integer.parseInt(this.textfieldnumero.getText()));
+			textfieldresultado.setText(Rpta);
+		}
+		
+		if (e.getSource()==boton2) {
+			textfieldnumero.setText("");
+			textfieldresultado.setText("");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		NUMEROLETRA formulario1=new NUMEROLETRA();
+		formulario1.setBounds(50, 50, 500, 300);
+		formulario1.setVisible(true);
+		
+	}
+}
