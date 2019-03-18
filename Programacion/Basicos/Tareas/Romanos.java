@@ -35,19 +35,19 @@ public class Romanos extends JFrame implements ActionListener {
 		add(Mostrar);
 		
 		Res_Uni = new JLabel();
-		Res_Uni.setBounds(100, 150,100,30);
+		Res_Uni.setBounds(190, 150,100,30);
 		add(Res_Uni);
 		
 		Res_Dece = new JLabel();
-		Res_Dece.setBounds(130, 150,100,30);
+		Res_Dece.setBounds(160, 150,100,30);
 		add(Res_Dece);
 		
 		Res_Cen = new JLabel();
-		Res_Cen.setBounds(160, 150,100,30);
+		Res_Cen.setBounds(130, 150,100,30);
 		add(Res_Cen);
 		
 		Res_Mill = new JLabel();
-		Res_Mill.setBounds(190, 150,100,30);
+		Res_Mill.setBounds(100, 150,100,30);
 		add(Res_Mill);
 		
 	
