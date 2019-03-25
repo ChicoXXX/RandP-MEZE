@@ -1,0 +1,111 @@
+package ProgramaLista;
+
+import java.util.ArrayList;
+
+public class MyArray {
+
+      public static ArrayList<Integer> datos = new ArrayList<Integer>();
+      
+      public static void ingresar(int numero) {
+    	  datos.add(numero);
+      }
+      
+      public static int [] obtener() {
+    	  int [] array = null;
+    	  
+    	  int tamaño= datos.size();
+    	  
+    	  array = new int [tamaño];
+    	  
+    	  for (int i =0; i < tamaño; i++) {
+    		  array [i] = datos.get(i);
+    	  }
+    	  
+    	  return array;
+      }
+      
+      
+      public static int Suma() {
+    	  
+    	  int [ ] arraysuma = null;
+    	  int tamaño = datos.size();
+    	  int total = 0;
+    	  
+    	  arraysuma = new int [tamaño];
+    	  
+    	  for (int i = 0; i < tamaño; i++) {
+    		  arraysuma [i] = datos.get(i);
+    	  }  
+    	  
+    	  
+    	  
+    		  for (int j = 0; j < tamaño; j++) {
+    				  total += arraysuma[j];
+    		  }
+    		return total;
+      }
+      
+      public static double Promedio() {
+    	  
+    	  int [ ] arraypromedio = null;
+    	  int tamaño = datos.size();
+    	  int total = 0;
+    	  double promedio;
+    	  
+    	  arraypromedio = new int [tamaño];
+    	  
+    	  for (int i = 0; i < tamaño; i++) {
+    		  arraypromedio [i] = datos.get(i);
+    	  }
+    	  
+    	  for (int j = 0; j < tamaño; j++) {
+			  total += arraypromedio[j];
+	       }
+    	  promedio = (total/tamaño);
+    	  return promedio;
+    	  
+    	  }
+      
+      public static int Mayor() {
+    	  int [ ] arraymayor = null;
+    	  int tamaño = datos.size();
+    	  
+    	  arraymayor = new int [tamaño];
+    	  
+    	  for (int i = 0; i < tamaño; i++) {
+    		  arraymayor [i] = datos.get(i);
+    	  }
+    	  
+    	  int mayor = arraymayor [0];
+    	  
+    	  for (int j = 1; j < tamaño; j++) {
+    		  if (mayor < arraymayor[j]) {
+    			  mayor = arraymayor [j];
+    		  }
+    	  }
+    	  
+    	  return mayor;
+      }
+      
+      public static int Menor() {
+    	  int [ ] arraymenor = null;
+    	  int tamaño = datos.size();
+    	  
+    	  arraymenor = new int [tamaño];
+    	  
+    	  for (int i = 0; i < tamaño; i++) {
+    		  arraymenor [i] = datos.get(i);
+    	  }
+    	  
+    	  int menor = arraymenor [0];
+    	  
+    	  for (int j = 1; j < tamaño; j++) {
+    		  if (menor > arraymenor[j]) {
+    			  menor = arraymenor [j];
+    		  }
+    	  }
+    	  
+    	  return menor;
+      }
+      
+   }
