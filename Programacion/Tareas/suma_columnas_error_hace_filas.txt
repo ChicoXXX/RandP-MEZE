@@ -1,0 +1,73 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package matriz_suma;
+
+/**
+ *
+ * @author angelgabriel
+ */
+public class Matriz_suma {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+      int matriz [][] = new int [3][3];
+      int cont =0;
+    
+      int columnas =0;
+      int filas = 0;
+            
+      //for para crear matriz y llenarla automaticamente
+        for (columnas =0; columnas<3; columnas++)
+        {
+           
+             for (filas = 0 ; filas<3; filas++)
+             {
+                 matriz[filas][columnas] +=cont;
+                 cont++;
+             } 
+            
+        }
+        
+        
+        //for  para la suma columnas
+         String resultado ="";
+         for (columnas =0; columnas<3; columnas++)
+        {
+               int suma_columnas =0;
+           
+             for (filas = 0 ; filas<3; filas++)
+             {
+                 resultado +=matriz[filas][columnas];
+                 resultado += "      ";  
+                
+              
+              suma_columnas += matriz[filas][columnas];
+       
+             
+                    
+                 
+             } 
+              resultado +="\n"; 
+              System.out.println(" suma de columnas ["+columnas+"] = " +suma_columnas);
+              
+        }
+        
+          System.out.println(resultado);
+        
+             
+    }
+             
+        
+        
+        
+        
+        
+    }
+    
