@@ -1,0 +1,64 @@
+public class matriz {
+
+	public static void main (String args[]) {
+		
+		int columna,fila;
+		String mostrar = "";
+		String mostrar2 = "";
+		
+		int Matriz [][] =new int [5][5];
+		
+		//CREANDO MATRIZ CON RANDOM	
+		for(columna=0; columna<Matriz.length; columna++) {
+			for(fila=0; fila<Matriz.length; fila++) {
+				
+				Matriz [columna][fila] = (int) (Math.random()*10);
+			}
+			
+		}
+		//MOSTRANDO MATRIZ CON RANDOM DESORDENADO 
+			for(columna=0; columna<Matriz.length; columna++) {
+				for(fila=0; fila<Matriz.length; fila++) {
+					
+					mostrar += Matriz[columna][fila];
+					mostrar += "   ";
+					
+				}
+				mostrar += "\n";
+				
+			}
+			System.out.println(mostrar);
+			
+	         //	COMPARACIONES
+			for(columna=0; columna<Matriz.length; columna++) {
+				for(fila=0; fila<Matriz.length; fila++) {
+					for(int columna2=0; columna2<Matriz.length; columna2++){
+						for(int fila2=0; fila2<Matriz.length; fila2++) {
+							
+							int num;
+							
+							if (Matriz[columna][fila]< Matriz[columna2][fila2]) {
+							num = Matriz[columna][fila];
+							Matriz[columna][fila] = Matriz[columna2][fila2];
+							Matriz[columna2][fila2] = num;
+							}
+							
+						}
+						
+					}
+				}
+			}
+			//MOSTRAR NUMEROS
+			
+			for(columna=0; columna<Matriz.length; columna++) {
+				for(fila=0; fila<Matriz.length; fila++) {
+					
+					mostrar2 += Matriz[columna][fila];
+					mostrar2 += "   ";
+				}
+				mostrar2 += "\n";
+			}
+			System.out.println(mostrar2);
+	}
+	
+}
