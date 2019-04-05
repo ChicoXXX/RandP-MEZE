@@ -6,13 +6,13 @@ public class matriz {
 		String mostrar = "";
 		String mostrar2 = "";
 		
-		int Matriz [][] =new int [5][5];
+		int Matriz [][] =new int [50][50];
 		
 		//CREANDO MATRIZ CON RANDOM	
 		for(columna=0; columna<Matriz.length; columna++) {
 			for(fila=0; fila<Matriz.length; fila++) {
 				
-				Matriz [columna][fila] = (int) (Math.random()*10);
+				Matriz [columna][fila] = (int) (Math.random()*100);
 			}
 			
 		}
