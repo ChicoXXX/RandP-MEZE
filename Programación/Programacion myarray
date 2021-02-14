@@ -1,0 +1,159 @@
+package OperacionesArray;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import convertidorNumerosLetra.numero;
+
+@SuppressWarnings("serial")
+public class PrincipalMyArray extends JFrame implements ActionListener{
+	
+	private JTextField textfieldingresarnumeros,textfieldresultadosuma,textfieldresultadopromedio,textfieldresultadomayor, textfieldresultadomenor;
+    private JButton botonGuardar,botonSuma,botonPromedio,botonMayor,botonMenor;
+    
+    public JLabel RESULTADOSUMA,RESULTADOPROMEDIO,RESULTADOMAYOR,RESULTADOMENOR,INGRESARNUMEROS;
+    
+    
+    public PrincipalMyArray(){
+    	
+    	super("Operación");
+        setLayout(null);
+        
+        //Label de ingresar numeros
+        this.INGRESARNUMEROS = new JLabel("Ingresa los valores");
+        INGRESARNUMEROS.setBounds(10,10,200,30);
+        this.add(this.INGRESARNUMEROS);
+        
+        //textfile donde vas a ingresar tus números
+        textfieldingresarnumeros=new JTextField();
+        textfieldingresarnumeros.setBounds(10,40,100,30);
+        add(textfieldingresarnumeros);
+        
+        //Label de suma
+        this.RESULTADOSUMA = new JLabel("Tu resultado suma es: ");
+        RESULTADOSUMA.setBounds(150,10,200,30);
+        this.add(this.RESULTADOSUMA);
+        
+        //textfield donde se va a mostrar el resultado de suma
+        textfieldresultadosuma=new JTextField();
+        textfieldresultadosuma.setBounds(150,40,200,30);
+        add(textfieldresultadosuma);
+        
+        //Label de promedio
+        this.RESULTADOPROMEDIO = new JLabel("Tu promedio es: ");
+        RESULTADOPROMEDIO.setBounds(150,70,200,30);
+        this.add(this.RESULTADOPROMEDIO);
+        
+        //textfield donde se va a mostrar el resultado de promedio
+        textfieldresultadopromedio=new JTextField();
+        textfieldresultadopromedio.setBounds(150,100,200,30);
+        add(textfieldresultadopromedio);
+        
+        //Label de mayor
+        this.RESULTADOMAYOR = new JLabel("El número mayor es: ");
+        RESULTADOMAYOR.setBounds(150,130,200,30);
+        this.add(this.RESULTADOMAYOR);
+        
+        
+        //textfield donde se va a mostrar el resultado de mayor
+        textfieldresultadomayor=new JTextField();
+        textfieldresultadomayor.setBounds(150,160,200,30);
+        add(textfieldresultadomayor);
+        
+        //Label de menor
+        this.RESULTADOMENOR = new JLabel("El número menor es: ");
+        RESULTADOMENOR.setBounds(150,190,200,30);
+        this.add(this.RESULTADOMENOR);
+        
+        //textfield donde se va a mostrar el resultado de menor
+        textfieldresultadomenor=new JTextField();
+        textfieldresultadomenor.setBounds(150,220,200,30);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(textfieldresultadomenor);
+        
+        //boton para guardar datos en arreglo
+        botonGuardar=new JButton("Guardar");
+        botonGuardar.setBounds(10,90,100,30);
+        add(botonGuardar);
+        botonGuardar.addActionListener(this);
+        
+       
+        //boton para la suma
+        botonSuma=new JButton("SUMA");
+        botonSuma.setBounds(10,200,100,30);
+        add(botonSuma);
+        botonSuma.addActionListener(this);
+        
+        
+        //boton para el promedio
+        botonPromedio=new JButton("PROMEDIO");
+        botonPromedio.setBounds(10,240,100,30);
+        add(botonPromedio);
+        botonPromedio.addActionListener(this);
+        
+        //boton para el mayor
+        botonMayor=new JButton("MAYOR");
+        botonMayor.setBounds(10,280,100,30);
+        add(botonMayor);
+        botonMayor.addActionListener(this);
+        
+        //boton para el menor
+        botonMenor=new JButton("MENOR");
+        botonMenor.setBounds(10, 330, 100, 30);
+        add(botonMenor);
+        botonMenor.addActionListener(this);
+    	
+    }
+	
+    public void actionPerformed(ActionEvent e) {
+       
+        if (e.getSource()== botonSuma) {
+        	
+        	
+			String[] listaoriginal = this.textfieldingresarnumeros.getText().split(",");
+		
+        	String total = "";
+        	
+        	for (int i=0 ; i < this.textfieldingresarnumeros.getText().length(); i++)
+        	{
+        		total = total + lista[i];
+        	}
+        	
+        
+        	textfieldresultadosuma.setText(total);
+        }
+        
+        if (e.getSource() == botonPromedio) {
+        	
+        }
+        
+        if (e.getSource()== botonMayor) {
+        	
+        }
+        
+        if(e.getSource()== botonMenor) {
+        	
+        }
+    	
+     }
+
+	private int card(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PrincipalMyArray formularioArray = new PrincipalMyArray();
+		formularioArray.setBounds(50, 50, 400, 500);
+		formularioArray.setVisible(true);
+
+	}
+
+}

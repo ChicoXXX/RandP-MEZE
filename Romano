@@ -1,0 +1,150 @@
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class numero extends JFrame implements ActionListener {
+	
+	public JTextField Texto;
+	public JLabel Ingresar, IngresarNumero, Temp, MostrarResultado, ResultadoUnidad, ResultadoDecena, ResultadoCentena, ResultadoMillar;
+	public JButton Boton, Botonlimpiar;
+	
+	public numero(){
+		super ("Números Decimales a Números Romanos");
+		setLayout(null);
+		
+		IngresarNumero = new JLabel("Ingresa el Número");
+		IngresarNumero.setBounds(100,10,150,30);
+		add(IngresarNumero);
+		
+		Texto = new JTextField();
+		Texto.setBounds(100,40,100,30);
+		add(Texto);
+		
+		Ingresar = new JLabel();
+		Ingresar.setBounds(100,80,100,30);
+		add(Ingresar);
+		
+		Boton = new JButton("Conversión");
+		Boton.setBounds(100,90,100,30);
+		add(Boton);
+		Boton.addActionListener(this); 
+		
+		MostrarResultado = new JLabel("Tu resultado es: ");
+		MostrarResultado.setBounds(100, 120,100,30);
+		add(MostrarResultado);
+		
+		ResultadoUnidad = new JLabel();
+		ResultadoUnidad.setBounds(190, 150,100,30);
+		add(ResultadoUnidad);
+		
+		ResultadoDecena = new JLabel();
+		ResultadoDecena.setBounds(160, 150,100,30);
+		add(ResultadoDecena);
+		
+		ResultadoCentena = new JLabel();
+		ResultadoCentena.setBounds(130, 150,100,30);
+		add(ResultadoCentena);
+		
+		ResultadoMillar = new JLabel();
+		ResultadoMillar.setBounds(100, 150,100,30);
+		add(ResultadoMillar);
+		
+		Botonlimpiar = new JButton("Limpiar");
+		Botonlimpiar.setBounds(100, 220, 100, 30);
+		add(Botonlimpiar);
+		Botonlimpiar.addActionListener(this);
+	
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	public void actionPerformed(ActionEvent f) {
+		  if (f.getSource()==Boton) {
+			  
+	          String Decimal=Texto.getText();
+	         
+	          int Conver=Integer.parseInt(Decimal);	         
+	          int  Millares, Centenas, Decenas, Unidades;
+	       
+  
+		        //ConversiónUnidades
+			      Unidades=Conver%10;  Conver/=10;    
+			      
+				//ConversiónDecenas
+			      Decenas= Conver%10; Conver/=10;	
+			      
+				//ConversiónCentenas 
+				  Centenas=Conver%10;  Conver/=10;	
+				  
+				//ConversiónMillares
+		          Millares=Conver%10; Conver/=10;
+		          
+		      	          
+		       switch(Millares) {
+		       		case 1: ResultadoMillar.setText(String.valueOf("M")) ; break;
+		       		case 2: ResultadoMillar.setText(String.valueOf("MM")) ; break;
+		       		case 3: ResultadoMillar.setText(String.valueOf("MMM")) ; break;
+		       		default :  ResultadoMillar.setText(String.valueOf("")) ; break;
+		       }
+		  
+		         
+		        switch (Centenas) {
+		    		case 1: ResultadoCentena.setText(String.valueOf("C")); break;
+		   		case 2: ResultadoCentena.setText(String.valueOf("CC")); break;
+		   		case 3: ResultadoCentena.setText(String.valueOf("CCC")); break;
+                   		case 4 :ResultadoCentena.setText(String.valueOf("CD")); break;
+                   		case 5 :ResultadoCentena.setText(String.valueOf("D")); break;
+                    		case 6 :ResultadoCentena.setText(String.valueOf("DI")); break;
+                    		case 7 :ResultadoCentena.setText(String.valueOf("DII")); break;
+                   		case 8 :ResultadoCentena.setText(String.valueOf("DIII")); break;
+                    		case 9 :ResultadoCentena.setText(String.valueOf("CM")); break;
+                   	 	default :ResultadoCentena.setText(String.valueOf("")); break;      
+
+		        }
+		           
+		       switch(Decenas) {
+		       		case 1: ResultadoDecena.setText(String.valueOf("X")); break;
+		       		case 2: ResultadoDecena.setText(String.valueOf("XX")); break;
+		       		case 3: ResultadoDecena.setText(String.valueOf("XXX")); break;
+		       		case 4: ResultadoDecena.setText(String.valueOf("XL")); break;
+		       		case 5: ResultadoDecena.setText(String.valueOf("L")); break;
+		       		case 6: ResultadoDecena.setText(String.valueOf("XL")); break;
+		       		case 7: ResultadoDecena.setText(String.valueOf("XLL")); break;
+		       		case 8: ResultadoDecena.setText(String.valueOf("XLLL")); break;
+		       		case 9: ResultadoDecena.setText(String.valueOf("XC")); break;
+		       		default: ResultadoDecena.setText(String.valueOf("")); break;
+		       				       		
+		       }
+		          switch(Unidades){         
+		          	case 1: ResultadoUnidad.setText(String.valueOf("I")); break;      		        		
+		          	case 2: ResultadoUnidad.setText(String.valueOf("II")); break;	          		   		
+		          	case 3: ResultadoUnidad.setText(String.valueOf("III")); break;	          		
+		          	case 4: ResultadoUnidad.setText(String.valueOf("IV")); break;	          		         		
+		          	case 5: ResultadoUnidad.setText(String.valueOf("V")); break;	          			          		
+		          	case 6: ResultadoUnidad.setText(String.valueOf("VI")); break;	          			          		
+		          	case 7: ResultadoUnidad.setText(String.valueOf("VII")); break;	          			          		
+		          	case 8: ResultadoUnidad.setText(String.valueOf("VIII")); break;	          		
+		          	case 9:	ResultadoUnidad.setText(String.valueOf("IX")); break; 
+		          	default: ResultadoUnidad.setText(String.valueOf("")); break;		         	
+		          	
+		         }
+		              	            
+		     }
+		  
+			/*if (e.getSource()==Botonlimpiar) {
+				ResultadoMillar.setText("");
+				ResultadoCentena.setText("");
+				ResultadoDecena.setText("");
+				ResultadoUnidad.setText("");
+				Texto.setText("");
+				}
+			}*/
+	}	
+	public static void main(String[] args) {
+	
+		numero Form = new numero();
+		Form.setBounds(10, 80, 350, 300);
+		Form.setVisible(true);
+
+	}
+}
